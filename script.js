@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function getTimeRemaining(deadline) {
-        const total = Date.parse(deadline) - Date.parse(new Date()),
+        const total = (Date.parse(deadline) - 10800000) - Date.parse(new Date()),
             days = Math.floor(total / 1000 / 60 / 60 / 24),
             hours = Math.floor((total / 1000 / 60 / 60) % 24),
             minutes = Math.floor((total / 1000 / 60) % 60),
@@ -50,6 +50,4 @@ window.addEventListener('DOMContentLoaded', () => {
     const deadline = '2022-01-01';
 
     displayTimeRemaining('.timer', deadline);
-    console.log(Date.parse(deadline));
-    console.log(new Date());
 });

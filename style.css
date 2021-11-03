@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #1f1f1f;
+    font-family: 'Poppins', sans-serif;
 }
 .main {
     position: relative;
@@ -38,6 +38,7 @@
 } 
 .timer__item {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 150px;
@@ -46,9 +47,23 @@
     box-shadow: 2px 5px 10px 2px rgba(60, 60, 60, 0.7);
     border-radius: 20px;
 }
+
+.timer__item:last-child {
+    background: rgba(51, 23, 5, 0.9);
+}
+
+.timer__item:last-child span, .timer__item:last-child p {
+    color: #fff;
+}
+
 .timer__item span {
-    font-family: 'Lato', sans-serif;
+    display: block;
+    margin-bottom: 15px;
     font-size: 80px;
+}
+.timer__item p {
+    display: block;
+    font-size: 16px;
 }
 .mark {
     display: block;
@@ -56,7 +71,6 @@
     position: absolute;
     bottom: 15px;
     text-align: center;
-    font-family: 'Lato', sans-serif;
     font-size: 16px;
     color:rgba(255, 255, 255, .7);
 }
@@ -68,6 +82,7 @@
     }
     .timer__item span {
         font-size: 70px;
+        margin-bottom: 0;
     }
 }
 @media(max-width: 575.98px) {
@@ -79,6 +94,10 @@
         height: 95px;
     }
     .timer__item span {
-        font-size: 50px;
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+    .timer__item p {
+        font-size: 10px;
     }
 }
